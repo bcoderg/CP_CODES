@@ -1,4 +1,4 @@
-//problem link : 
+//problem link
 //https://mentorpick.com/code?cid=a805c39e-f169-4ec3-8e1c-11b7360a2740&cslug=beingzero-restart-2024&pid=ac9144d4-08f5-49cf-83cd-2cab78f8e81d&pslug=bz-quick-sort-get-partition-indices&courseId=null&sectionId=ebd6682e-cf62-4337-b292-e8602f8c3613&type=null
 
 #define inti long long
