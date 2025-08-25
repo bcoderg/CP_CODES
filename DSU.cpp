@@ -2,7 +2,6 @@
 using namespace std;
 #define fast ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
-
 class UFDS{
     vector<int>rank,size,par; ///use basd on scenario 
         public:
@@ -24,12 +23,13 @@ class UFDS{
             return par[u]=find(par[u]);
         }
 
+        //union can be done by rank/size actually both follow same pattern
         void join(int u , int v){
             int pu=find(u);
             int pv=find(v);
             if(pu==pv) return;//already connected
 
-            if(rank[pu]>rank[pv]){
+            if(rank[pu]>rank[pv]){//if union by size compare sizes here and attach smaller size one's parent to larger size component parent
                 par[pv]=pu;
                 size[pu]+=size[pv];
             }
@@ -47,10 +47,7 @@ class UFDS{
         }
 };
 
-
-
 void badhri(){
-
 UFDS ufds(7);
 ufds.join(1,2);
 ufds.join(2,3);
@@ -66,9 +63,7 @@ else{
 }
 
 cout<<"\n";
-
 ufds.join(3,7);
-
 
 if(ufds.find(3)==ufds.find(7)){
     cout<<"YES";
@@ -76,18 +71,12 @@ if(ufds.find(3)==ufds.find(7)){
 else{
     cout<<"NO";
 }
-
-
-
 }
 
 signed main(){
-
     fast
     int t=1;
- 
    // cin>>t;
-    
     while(t--){
         badhri();
     }
