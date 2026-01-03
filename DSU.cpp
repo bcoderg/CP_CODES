@@ -3,12 +3,12 @@ using namespace std;
 #define fast ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
 class UFDS{
-    vector<int>rank,size,par; ///use basd on scenario 
+    vector<int>rank,size;//use basd on scenario
+    vector<int>par;  
         public:
     UFDS(int n){
         par.resize(n+1);
-        rank.resize(n+1);
-        size.resize(n+1);
+        rank.resize(n+1);size.resize(n+1);
         for(int i=0;i<=n;i++){
             par[i]=i;
             rank[i]=0; //all ranks 0 initially
@@ -81,3 +81,4 @@ signed main(){
         badhri();
     }
 }
+
